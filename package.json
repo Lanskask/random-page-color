@@ -3,11 +3,18 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://lanskask.github.io/random-page-color/",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "predeploy": "deno run build",
+    "deploy": "gh-pages -d dist"
   },
   "private": true,
   "dependencies": {
     "vite": "^6.0.6"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.2.0"
   }
 }
