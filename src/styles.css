@@ -1,22 +1,16 @@
 body {
+    margin: 0;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    margin: 0;
     font-family: Arial, sans-serif;
+    transition: background-color 0.5s ease;
 }
 
 #color-display {
-    width: 200px;
-    height: 200px;
-    margin-bottom: 20px;
-    border: 1px solid #000;
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
 }

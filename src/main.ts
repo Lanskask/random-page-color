@@ -10,11 +10,19 @@ function getRandomColor(): string {
 function setColor(): void {
   const colorDisplay = document.getElementById('color-display');
   if (colorDisplay) {
-    colorDisplay.style.backgroundColor = getRandomColor();
+    let newColor = getRandomColor();
+    document.body.style.backgroundColor = newColor;
+    // colorDisplay.style.backgroundColor = newColor;
+    colorDisplay.textContent = newColor;
+    colorDisplay.style.fontSize = '2rem';
+    colorDisplay.style.display = 'flex';
+    colorDisplay.style.justifyContent = 'center';
+    colorDisplay.style.alignItems = 'center';
+    colorDisplay.style.height = '100vh';
+    colorDisplay.style.margin = '0';
   }
 }
 
 document.getElementById('change-color')?.addEventListener('click', setColor);
 
-// Установим начальный цвет при загрузке страницы
 window.addEventListener('load', setColor);
